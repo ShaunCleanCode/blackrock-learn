@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-zinc-50 text-zinc-900">
@@ -8,12 +10,12 @@ export default function Home() {
         <p className="text-zinc-600">
           Cursor Learn 스타일로 번역/요약/퀴즈/챗봇을 붙인 문서형 사이트 프로토타입입니다.
         </p>
-        <a
+        <Link
           href="/learn/introduction"
           className="inline-flex h-11 w-fit items-center justify-center rounded-full bg-zinc-900 px-5 text-sm font-medium text-white hover:bg-zinc-800"
         >
           학습 시작하기
-        </a>
+        </Link>
       </div>
     </main>
   );

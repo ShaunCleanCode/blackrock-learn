@@ -1,6 +1,14 @@
 import { notFound } from "next/navigation";
-import { getDocBySlug } from "@/content/docs";
+import { allDocs, getDocBySlug } from "@/content/docs";
 import { DocPageClient } from "@/components/DocPageClient";
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return allDocs().map((doc) => ({
+    slug: doc.slug.split("/"),
+  }));
+}
 
 export default async function LearnDocPage({
   params,
